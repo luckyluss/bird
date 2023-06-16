@@ -1,0 +1,27 @@
+import time
+
+# Define the characters for the bird and the sky
+bird_char = ">"
+sky_char = " "
+
+# Define the starting position of the bird
+bird_pos = 20
+
+# Loop through the simulation
+while True:
+    # Clear the screen
+    print("\033c", end="")
+    
+    # Update the position of the bird
+    bird_pos -= 1
+    
+    # Print out the sky and the bird
+    for i in range(40):
+        if i == bird_pos:
+            print(bird_char, end="")
+        else:
+            print(sky_char, end="")
+    print()
+    
+    # Wait for a short time before updating the simulation
+    time.sleep(0.1)
